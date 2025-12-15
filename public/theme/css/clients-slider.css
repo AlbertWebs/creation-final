@@ -1,0 +1,282 @@
+/* Clients Slider - Uniform Logo Sizes and Linear Continuous Slide */
+
+/* Override any conflicting styles from shortcodes.css */
+.client-section .client-box {
+    display: flex !important;
+    position: relative !important;
+    text-align: center !important;
+}
+
+/* Client box container */
+.client-section .client-box {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important; /* Remove padding from box, padding will be on thumbnail */
+    height: 150px !important; /* Fixed height for uniform appearance */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.client-section .client-box:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Client thumbnail container - Fixed uniform square size */
+.client-section .client-box .client-thumbnail {
+    width: 150px !important; /* Fixed width for uniform size */
+    height: 150px !important; /* Fixed height for uniform size (square) */
+    min-width: 150px !important; /* Prevent shrinking */
+    min-height: 150px !important; /* Prevent shrinking */
+    max-width: 150px !important; /* Prevent expanding */
+    max-height: 150px !important; /* Prevent expanding */
+    display: flex !important; /* Override table-cell from shortcodes.css */
+    align-items: center; /* Vertical center alignment */
+    justify-content: center;
+    padding: 15px !important; /* Padding for better fit */
+    background: #f9fafb !important; /* Faint background */
+    border: 1px solid #e5e7eb !important; /* Faint border */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important; /* Include padding and border in the 150px size */
+    overflow: hidden !important; /* Prevent image overflow */
+    margin: 0 auto !important; /* Center the container */
+    flex-shrink: 0 !important; /* Prevent shrinking */
+    flex-grow: 0 !important; /* Prevent growing */
+}
+
+.client-section .client-box:hover .client-thumbnail {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+    background: #ffffff;
+}
+
+/* Client logo images - Uniform sizing */
+.client-section .client-box .client-thumbnail img {
+    max-width: calc(100% - 0px) !important; /* Fit within container padding */
+    max-height: calc(100% - 30px) !important; /* Fit within container padding (150px height - 30px padding) */
+    width: auto !important;
+    height: auto !important;
+    min-height: 60px !important; /* Increased minimum height */
+    object-fit: contain !important; /* Maintains aspect ratio, fits within container */
+    object-position: center center !important; /* Center alignment */
+    border: none !important; /* Remove border from image */
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: transparent !important; /* Transparent background on image */
+    transition: transform 0.3s ease !important;
+    display: block !important; /* Override inline-block from shortcodes.css */
+    margin: 0 auto !important;
+    vertical-align: middle !important; /* Vertical alignment */
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-align: center !important;
+    -webkit-filter: none !important; /* Remove grayscale filter */
+    filter: none !important; /* Remove grayscale filter */
+    box-sizing: border-box !important; /* Ensure proper sizing */
+}
+
+.client-section .client-box:hover .client-thumbnail img {
+    transform: scale(1.05) !important; /* Slight zoom on hover */
+}
+
+/* Slick slider container adjustments */
+.client-section .slick_slider,
+.client-section .client-slider {
+    overflow: hidden !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-height: 150px !important; /* Increased minimum height for bigger logos */
+    height: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Ensure parent containers don't constrain width */
+.client-section .container {
+    max-width: 100% !important;
+}
+
+.client-section .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.client-section .col-md-12 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Remove Bootstrap row styling that might interfere */
+.client-section .client-slider.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Slick slide direct children */
+.client-section .client-slider .slick-slide > div {
+    padding: 0 10px;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.client-section .client-slider .slick-list {
+    overflow: hidden !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    min-height: 150px !important; /* Increased minimum height for bigger logos */
+    height: auto !important;
+}
+
+.client-section .client-slider .slick-track {
+    display: flex !important;
+    align-items: center !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-height: 150px !important; /* Increased minimum height for bigger logos */
+    height: auto !important;
+}
+
+.client-section .client-slider .slick-slide {
+    display: block !important;
+    height: auto !important;
+    min-height: 150px !important; /* Increased minimum height for bigger logos */
+    opacity: 1 !important;
+    visibility: visible !important;
+    float: left !important;
+    margin: 0 !important;
+    padding: 0 8px !important; /* Small padding for spacing */
+    box-sizing: border-box !important;
+    /* Let Slick calculate width - don't override */
+}
+
+.client-section .client-slider .slick-slide > div {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure client-box is visible inside slides */
+.client-section .client-slider .slick-slide .client-box {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.client-section .client-slider .slick-slide .client-thumbnail {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Slick track for continuous linear slide */
+.client-section .slick-track {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+}
+
+/* Slick slide adjustments */
+.client-section .slick-slide {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center;
+    height: auto;
+}
+
+.client-section .slick-slide > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center;
+}
+
+/* Remove default slick clone styling issues */
+.client-section .slick-cloned {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .client-section .client-box {
+        height: 110px;
+        padding: 15px;
+    }
+    
+    .client-section .client-box .client-thumbnail {
+        padding: 15px;
+    }
+    
+    .client-section .client-box .client-thumbnail img {
+        max-height: 65px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .client-section .client-box {
+        height: 100px;
+        padding: 15px;
+    }
+    
+    .client-section .client-box .client-thumbnail {
+        padding: 15px;
+    }
+    
+    .client-section .client-box .client-thumbnail img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 777px) {
+    .client-section .client-box {
+        height: 90px;
+        padding: 12px;
+    }
+    
+    .client-section .client-box .client-thumbnail {
+        padding: 12px;
+    }
+    
+    .client-section .client-box .client-thumbnail img {
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 575px) {
+    .client-section .client-box {
+        height: 100px; /* Slightly taller for 2 logos */
+        padding: 15px; /* More padding for mobile */
+    }
+    
+    .client-section .client-box .client-thumbnail {
+        padding: 15px; /* More padding for mobile */
+    }
+    
+    .client-section .client-box .client-thumbnail img {
+        max-height: 60px; /* Larger logos on mobile for better visibility */
+    }
+}
+
