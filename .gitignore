@@ -2,7 +2,7 @@
 /public/build
 /public/hot
 /public/storage
-/public/uploads
+
 deployment-package-2025-12-15-134906.zip
 /storage/*.key
 /storage/framework
