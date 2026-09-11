@@ -1,5 +1,9 @@
 @extends('front.master')
 
+@section('additional-head')
+<link rel="stylesheet" type="text/css" href="{{ asset('theme/css/contact-page.css') }}"/>
+@endsection
+
 @section('content')
 
 
@@ -33,114 +37,88 @@
 <div class="site-main">
 
 
-<section class="ttm-row pt-85 res-991-pt-45 pb-0 res-991-pb-0 clearfix">
+<section class="contact-details">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <!--featured-icon-box-->
-                <div class="featured-icon-box icon-align-top-content style7">
-                    <div class="featured-inner">
-                        <div class="featured-icon">
-                            <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md ttm-icon_element-style-square">
-                                <i class="flaticon flaticon-call-1"></i>
-                            </div>
+        <div class="contact-details-grid">
+            <article class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="contact-card-main">
+                    <h3>Call us</h3>
+                    <div class="contact-card-body">
+                        <a href="tel:+254723768593">+254 723 768 593</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="contact-card-main">
+                    <h3>Email us</h3>
+                    <div class="contact-card-body">
+                        <div>
+                            <span class="contact-card-label">General</span>
+                            <a href="mailto:info@creationltd.co.ke">info@creationltd.co.ke</a>
                         </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3>Phone Number</h3>
-                            </div>
-                            <div class="featured-desc">
-                                <p> +254 723 768 593</p>
-                                <p> +254 723 768 593</p>
-                            </div>
+                        <div>
+                            <span class="contact-card-label">Direct</span>
+                            <a href="mailto:henry@creationltd.co.ke">henry@creationltd.co.ke</a>
                         </div>
                     </div>
-                </div><!-- featured-icon-box end-->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <!--featured-icon-box-->
-                <div class="featured-icon-box icon-align-top-content style7">
-                    <div class="featured-inner">
-                        <div class="featured-icon">
-                            <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md ttm-icon_element-style-square">
-                                <i class="flaticon flaticon-email"></i>
-                            </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3>Email Address</h3>
-                            </div>
-                            <div class="featured-desc">
-                                <p>info@creationltd.co.ke</p>
-                                <p>henry@creationltd.co.ke</p>
-                            </div>
-                        </div>
+                </div>
+            </article>
+
+            <article class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="contact-card-main">
+                    <h3>Visit us</h3>
+                    <div class="contact-card-body">
+                        <a href="https://maps.google.com/?q=Creation+Office+Fitouts,+Nairobi" target="_blank" rel="noopener noreferrer">
+                            Industrial Area, Road A<br>No. 6, Nairobi, Kenya
+                        </a>
                     </div>
-                </div><!-- featured-icon-box end-->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <!--featured-icon-box-->
-                <div class="featured-icon-box icon-align-top-content style7">
-                    <div class="featured-inner">
-                        <div class="featured-icon">
-                            <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md ttm-icon_element-style-square">
-                                <i class="flaticon flaticon-navigation"></i>
-                            </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3>Visit Us On</h3>
-                            </div>
-                            <div class="featured-desc">
-                                <p>Industrial area -Road A no 6
-                                </p>
-                                <p>Nairobi, Kenya</p>
-                            </div>
-                        </div>
+                </div>
+            </article>
+
+            <article class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="contact-card-main">
+                    <h3>Opening hours</h3>
+                    <div class="contact-card-body">
+                        <dl class="contact-hours">
+                            <dt>Mon – Sat</dt>
+                            <dd>9:00 AM – 6:00 PM</dd>
+                            <dt>Sunday</dt>
+                            <dd class="is-closed">Closed</dd>
+                        </dl>
                     </div>
-                </div><!-- featured-icon-box end-->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <!--featured-icon-box-->
-                <div class="featured-icon-box icon-align-top-content style7">
-                    <div class="featured-inner">
-                        <div class="featured-icon">
-                            <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md ttm-icon_element-style-square">
-                                <i class="flaticon flaticon-wall-clock"></i>
-                            </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3>Visit Between</h3>
-                            </div>
-                            <div class="featured-desc">
-                                <p>Mon - Sat : 9.00 - 6.00</p>
-                                <p>Sunday : Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- featured-icon-box end-->
-            </div>
+                </div>
+            </article>
         </div>
     </div>
 </section>
 
 
 <!--- conatact-section -->
-<section class="ttm-row conatact-section bg-layer-equal-height mt_15 clearfix">
+<section class="ttm-row conatact-section contact-form-section clearfix">
     <div class="container">
         <!-- row -->
         <div class="row">
             <div class="col-lg-4">
-                <div class="col-bg-img-eight ttm-bg ttm-col-bgimage-yes ttm-textcolor-white spacing-11 z-index-2" style="background-image: url('{{asset('theme/images/bg-image/col-bgimage-8.jpg')}}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-                    <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
-                    <div class="layer-content">
-                            <h3 class="mb-5">Chat With A Live</h3>
-                            <p>Let’s chat with our live experts to get answer your questions.</p>
-                        <a target="new" class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-btn-style-border ttm-icon-btn-right ttm-btn-color-white mt-15" href="https://tawk.to/chat/631735a937898912e96779f9/1gc9aj7j0" tabindex="0">Live chat</a>
+                <aside class="contact-livechat" style="background-image: url('{{ asset('theme/images/bg-image/col-bgimage-8.jpg') }}');">
+                    <div class="contact-livechat-copy">
+                        <h3>Chat with a live expert</h3>
+                        <p>Let’s chat with our live experts to get answers to your questions.</p>
+                        <a class="contact-livechat-btn" href="https://tawk.to/chat/631735a937898912e96779f9/1gc9aj7j0" target="_blank" rel="noopener noreferrer">Live chat</a>
                     </div>
-                </div>
-                <!-- col-img-bg-img-eight end-->
+                </aside>
             </div>
             <div class="col-lg-8">
                 <!-- col-img-img-eight -->
