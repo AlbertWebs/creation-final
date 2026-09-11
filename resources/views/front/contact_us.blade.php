@@ -1,4 +1,4 @@
-@extends('front.master-contact')
+@extends('front.master')
 
 @section('content')
 

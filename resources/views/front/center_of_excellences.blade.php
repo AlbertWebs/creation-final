@@ -41,7 +41,7 @@
                         <!-- section title -->
                         <div class="section-title">
                             <h2>{{$Ser->title}}</h2>
-                            <p style="color:#000000; font-size:16px;">{!! html_entity_decode($Ser->content, ENT_QUOTES, 'UTF-8') !!}</p>
+                            <div style="color:#000000; font-size:16px;">{!! $Ser->formattedContent() !!}</div>
                         </div><!-- section title end -->
 
                     </div>
@@ -56,10 +56,7 @@
         </div>
     </section>
     <!--welcome-section end-->
-    @if($Ser->content_extra == null)
-
-
-    @else
+    @if($Ser->formattedContentExtra() !== '')
       <!--welcome-section-->
       <section class="welcome-section clearfix">
         <div class="container">
@@ -69,7 +66,7 @@
                         <!-- section title -->
                         <div class="section-title">
 
-                            <p style="color:#000000; font-size:16px;">{!! html_entity_decode($Ser->content_extra, ENT_QUOTES, 'UTF-8') !!}</p>
+                            <div style="color:#000000; font-size:16px;">{!! $Ser->formattedContentExtra() !!}</div>
                             <hr>
                         </div><!-- section title end -->
                         {{-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-round ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor mt-15 w-100 text-center" target="new" href="{{url('/')}}/contact-us" tabindex="0">Contact Us <i class="ti ti-arrow-right"></i></a> --}}

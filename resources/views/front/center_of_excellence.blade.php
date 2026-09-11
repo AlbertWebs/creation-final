@@ -52,14 +52,7 @@
                         <div class="section-title">
 
                             <div style="color:#000000; font-size:16px;">
-                                @php
-                                    $decodedContent = html_entity_decode($Ser->content, ENT_QUOTES, 'UTF-8');
-                                    // Split by double newlines to create paragraphs
-                                    $paragraphs = preg_split('/\n\s*\n/', $decodedContent, -1, PREG_SPLIT_NO_EMPTY);
-                                @endphp
-                                @foreach($paragraphs as $paragraph)
-                                    <p style="margin-bottom: 15px;">{!! nl2br(trim($paragraph)) !!}</p>
-                                @endforeach
+                                {!! $Ser->formattedContent() !!}
                             </div>
                         </div><!-- section title end -->
                         <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-round ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor mt-15 w-100 text-center" target="new" href="{{url('/')}}/contact-us" tabindex="0" style="color: #fff !important;">Contact Us <i class="ti ti-arrow-right"></i></a>
@@ -76,10 +69,7 @@
         </div>
     </section>
     <!--welcome-section end-->
-    @if($Ser->content_extra == null)
-
-
-    @else
+    @if($Ser->formattedContentExtra() !== '')
       <!--welcome-section-->
       <section class="welcome-section clearfix">
         <div class="container">
@@ -90,14 +80,7 @@
                         <div class="section-title">
 
                             <div style="color:#000000; font-size:16px;">
-                                @php
-                                    $decodedContentExtra = html_entity_decode($Ser->content_extra, ENT_QUOTES, 'UTF-8');
-                                    // Split by double newlines to create paragraphs
-                                    $paragraphsExtra = preg_split('/\n\s*\n/', $decodedContentExtra, -1, PREG_SPLIT_NO_EMPTY);
-                                @endphp
-                                @foreach($paragraphsExtra as $paragraph)
-                                    <p style="margin-bottom: 15px;">{!! nl2br(trim($paragraph)) !!}</p>
-                                @endforeach
+                                {!! $Ser->formattedContentExtra() !!}
                             </div>
                             <hr>
                         </div><!-- section title end -->
