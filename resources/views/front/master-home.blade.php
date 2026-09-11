@@ -81,6 +81,7 @@
     <script src="{{asset('theme/js/jquery.twentytwenty.js')}}"></script>
     <script src="{{asset('theme/js/circle-progress.min.js')}}"></script>
     <script src="{{asset('theme/js/main.js')}}"></script>
+    <script src="{{asset('theme/js/clients-slider.js')}}"></script>
     
     <!-- Smooth Scroll for Anchor Links -->
     <script>
@@ -270,109 +271,6 @@
                 $(this).find(':input[type="submit"]').prop('disabled', false);
             });
         }
-        
-        // Initialize client slider separately to avoid conflicts
-        $(document).ready(function() {
-            // Wait a bit to ensure main.js has run
-            setTimeout(function() {
-                if ($('.client-slider').length) {
-                    // Destroy any existing initialization first
-                    if ($('.client-slider').hasClass('slick-initialized')) {
-                        try {
-                            $('.client-slider').slick('unslick');
-                        } catch(e) {
-                            console.log('Error unslicking:', e);
-                        }
-                    }
-                    
-                    // Small delay to ensure unslick completes
-                    setTimeout(function() {
-                        // Force 6 slides on desktop - responsive will handle smaller screens
-                        // Slick breakpoints work as "less than or equal to"
-                        $('.client-slider').slick({
-                            slidesToShow: 6, // 6 logos on desktop (default for screens > 1024px)
-                            slidesToScroll: 1,
-                            arrows: false,
-                            autoplay: true,
-                            autoplaySpeed: 2000,
-                            speed: 2000,
-                            infinite: true,
-                            cssEase: 'linear',
-                            pauseOnHover: false,
-                            pauseOnFocus: false,
-                            fade: false,
-                            variableWidth: false,
-                            adaptiveHeight: false,
-                            useTransform: true,
-                            responsive: [
-                                {
-                                    breakpoint: 1024, // 1024px and below: show 4
-                                    settings: { 
-                                        slidesToShow: 4,
-                                        slidesToScroll: 1
-                                    }
-                                },
-                                {
-                                    breakpoint: 777, // 777px and below: show 3
-                                    settings: { 
-                                        slidesToShow: 3,
-                                        slidesToScroll: 1
-                                    }
-                                },
-                                {
-                                    breakpoint: 575, // 575px and below (mobile): show 2
-                                    settings: { 
-                                        slidesToShow: 2,
-                                        slidesToScroll: 1
-                                    }
-                                }
-                            ]
-                        });
-                        
-                        // Debug: Log the initialization
-                        var windowWidth = $(window).width();
-                        var currentSlides = $('.client-slider').slick('slickGetOption', 'slidesToShow');
-                        var slideCount = $('.client-slider .slick-slide:not(.slick-cloned)').length;
-                        console.log('Client slider initialized. Window width:', windowWidth, 'px. Slides showing:', currentSlides, 'Total slides:', slideCount);
-                        
-                        // Force correct slide widths for 6 slides on desktop
-                        setTimeout(function() {
-                            var slider = $('.client-slider');
-                            var sliderWidth = slider.width();
-                            var targetSlides = currentSlides;
-                            
-                            // Calculate correct width per slide
-                            var slideWidth = Math.floor((sliderWidth - (targetSlides * 16)) / targetSlides); // Account for padding
-                            
-                            // Apply width to all non-cloned slides
-                            slider.find('.slick-slide:not(.slick-cloned)').each(function() {
-                                $(this).css({
-                                    'width': slideWidth + 'px',
-                                    'min-width': slideWidth + 'px',
-                                    'max-width': slideWidth + 'px'
-                                });
-                            });
-                            
-                            // Force Slick to recalculate
-                            slider.slick('setPosition');
-                            
-                            console.log('Slide widths set to:', slideWidth, 'px for', targetSlides, 'slides');
-                        }, 500);
-                        
-                        // Force visibility
-                        $('.client-slider').css({
-                            'visibility': 'visible',
-                            'opacity': '1',
-                            'display': 'block'
-                        });
-                        $('.client-slider .client-box, .client-slider .client-thumbnail, .client-slider img').css({
-                            'visibility': 'visible',
-                            'opacity': '1'
-                        });
-                    }, 300);
-                }
-            }, 1500);
-        });
     </script>
 
 

@@ -131,7 +131,7 @@
     <!--welcome-section end-->
 
      <!--client-section_1-->
-     @include('front.clients-light')
+     @include('front.clients-light', ['clientSectionClass' => 'client-section-about'])
      <!--client-section_1-->
 
 

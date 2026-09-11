@@ -29,6 +29,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('theme/css/megamenu.css')}}"/>
 <link rel="stylesheet" type="text/css" href="{{asset('theme/css/responsive.css')}}"/>
 <link rel="stylesheet" type="text/css" href="{{asset('theme/css/mobile-responsive.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('theme/css/clients-slider.css')}}"/>
 <link rel='stylesheet' id='rs-plugin-settings-css' href="{{asset('theme/revolution/css/rs6.css')}}">
 @yield('additional-head')
 
@@ -76,6 +77,7 @@
     <script src="{{asset('theme/js/jquery.twentytwenty.js')}}"></script>
     <script src="{{asset('theme/js/circle-progress.min.js')}}"></script>
     <script src="{{asset('theme/js/main.js')}}"></script>
+    <script src="{{asset('theme/js/clients-slider.js')}}"></script>
 
     <!-- Revolution Slider -->
     <script src="{{asset('theme/revolution/js/slider.js')}}"></script>

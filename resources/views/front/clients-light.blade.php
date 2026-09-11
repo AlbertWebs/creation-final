@@ -1,5 +1,5 @@
     <!--client-section-->
-    <div class="ttm-row client-section mt_115 res-991-mt-45 ttm-bgcolor-white clearfix">
+    <div class="ttm-row client-section {{ $clientSectionClass ?? 'mt_115 res-991-mt-45' }} ttm-bgcolor-white clearfix">
         <div class="container">
             <!-- row -->
             <div class="row text-center">

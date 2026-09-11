@@ -456,35 +456,12 @@ a.rs-layer.tm-slider-btn[data-eo="n"].rs-layer-visible {
     .client-section {
         padding: 30px 0 !important;
     }
-    
-    .client-section .client-box .client-thumbnail {
-        width: 120px !important;
-        height: 120px !important;
-        min-width: 120px !important;
-        min-height: 120px !important;
-        max-width: 120px !important;
-        max-height: 120px !important;
-        padding: 10px !important;
-    }
-    
-    .client-section .client-box .client-thumbnail img {
-        max-height: 90px !important;
-    }
 }
 
 @media (max-width: 480px) {
-    .client-section .client-box .client-thumbnail {
-        width: 100px !important;
-        height: 100px !important;
-        min-width: 100px !important;
-        min-height: 100px !important;
-        max-width: 100px !important;
-        max-height: 100px !important;
-        padding: 8px !important;
-    }
-    
-    .client-section .client-box .client-thumbnail img {
-        max-height: 75px !important;
+    .client-section .client-box,
+    .client-section .client-slider .slick-slide {
+        height: 110px !important;
     }
 }
 
