@@ -131,48 +131,51 @@
                                 <h2 class="title">Send Your Message To Us</h2>
                             </div>
                         </div><!-- section title end -->
-                        <div class="padding_top30">
+                        <div class="contact-form-wrap">
                             <form id="contact_form" class="contact_form wrap-form clearfix" method="post" action="{{url('/submitMessage')}}">
                                 @csrf
-                                <div class="row ttm-boxes-spacing-20px">
+                                <input style="display: none" type="text" name="checkmate" tabindex="-1" autocomplete="off">
+                                <div class="row">
                                     <div class="col-md-6">
-                                        <label>
-                                            <span class="text-input"><input name="name" type="text" value="" placeholder="First Name..." required></span>
-                                        </label>
-                                    </div>
-                                    <input style="display: none" type="text" name="checkmate">
-                                    <div class="col-md-6">
-                                        <label>
-                                            <span class="text-input"><input name="email" type="text" value="" placeholder="Email Address..." required></span>
+                                        <label class="contact-field">
+                                            <span class="contact-field-label">Name</span>
+                                            <input name="name" type="text" autocomplete="name" placeholder="Your full name" required>
                                         </label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label>
-                                            <span class="text-input"><input name="mobile" type="text" value="" placeholder="Phone Number..." required></span>
+                                        <label class="contact-field">
+                                            <span class="contact-field-label">Email</span>
+                                            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
                                         </label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label>
-                                            <span class="text-input"><input name="subject" type="text" value="" placeholder="Subject." required></span>
+                                        <label class="contact-field">
+                                            <span class="contact-field-label">Phone</span>
+                                            <input name="mobile" type="tel" autocomplete="tel" placeholder="+254 7XX XXX XXX" required>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="contact-field">
+                                            <span class="contact-field-label">Subject</span>
+                                            <input name="subject" type="text" autocomplete="off" placeholder="How can we help?" required>
                                         </label>
                                     </div>
                                     <div class="col-md-12">
-                                        <label>
-                                            <span class="text-input"><textarea name="message" cols="50" rows="5" placeholder="Enter Message Here..." required></textarea></span>
+                                        <label class="contact-field">
+                                            <span class="contact-field-label">Message</span>
+                                            <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                                         </label>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <p class="cookies">
+                                    <div class="col-md-12">
+                                        <label class="contact-remember">
                                             <input id="cookies-consent" name="cookies-consent" type="checkbox" value="yes">
-                                            <label for="cookies-consent"> Save my name, email in this browser for the next time Send message</label>
-                                        </p>
-                                             {{--  --}}
-                                        <div class="col-lg-12 col-md-12" id="TheCapcha">
+                                            <span>Remember my name and email on this device</span>
+                                        </label>
+                                        <div class="contact-form-actions" id="TheCapcha">
                                             <div class="g-recaptcha" data-sitekey="6LcdKhQeAAAAAHbljXhOgo9_WHQE7LQnRMe7LgSO" data-callback="correctCaptcha"></div>
                                             <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                                            <button type="submit" class="contact-submit">Send message <i class="ti ti-arrow-right"></i></button>
                                         </div>
-                                        {{--  --}}
-                                        <button type="submit" class="ttm-btn ttm-btn-size-md ttm-btn-shape-round ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor mt-15 w-100 text-center" href="#" tabindex="0">Send Message <i class="ti ti-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </form>
@@ -187,7 +190,7 @@
 
 
 <!--google_map-->
-<div id="google_map" class="google_map">
+<div id="google_map" class="google_map contact-map">
     <div class="map_container">
         <div id="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.33158202457!2d36.7996562!3d-1.2734496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe07bbf266ae12aee!2sCreation%20Office%20Fitouts!5e0!3m2!1sen!2ske!4v1662463739010!5m2!1sen!2ske"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
